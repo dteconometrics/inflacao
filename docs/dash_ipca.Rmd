@@ -1,0 +1,84 @@
+---
+title: "Previsao ipca"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: scroll
+    #logo: logo.png
+    css: styles.css
+    social: menu
+    navbar:
+        - { icon: "fa-linkedin", href: "https://www.linkedin.com/in/vinicius-limeira-565117180/", align: right }
+        - { icon: "fa-at", href: "mailto:vinicius.valenca75@gmail.com", align: right }
+runtime: shiny
+---
+<script>
+$('.navbar-logo').wrap(target=_blank>');
+</script>
+
+
+<style type="text/css">
+@import url("https://analisemacro.com.br/wp-content/uploads/dlm_uploads/2022/01/styles.css");
+</style>
+
+
+```{r global, include=FALSE, message=FALSE, warning=FALSE}
+# Opções globais de chunk do documento
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, echo = FALSE)
+```
+
+
+Column {.sidebar data-width=300}
+-------------------------------------
+
+#### **Modelo de Previsão do IPCA**
+Esta dashboard apresenta os resultados de um modelo de previsão macroeconômico no que tange a **inflação da economia brasileira**, medida pelo IPCA mensal do IBGE. São implementados modelos de machine learning através de uma estratégia automatizada usando a linguagem `R`.
+
+**Sobre o workflow**:
+
+1) Coleta e tratamento de dados<br>
+2) Verificação de estacionariedade<br>
+3) Tratamento de lags das séries<br>
+4) Validação cruzada<br>
+5) Avaliação de acurácia dos modelos<br>
+6) Previsão fora da amostra<br>
+7) Visualização de resultados<br>
+
+
+**Última atualização**: `r format(Sys.Date(), "%d de %B de %Y")`.
+
+
+Column {.tabset}
+-------------------------------------
+
+### Fanchart {.no-title}
+
+```{r, fig.width=11}
+plt_fanchart_interactive
+
+```
+
+### Gráfico de acurácia {.no-title}
+
+```{r, fig.width=11}
+plt_rmse_interactive
+```
+
+
+Column {data-width=475}
+-------------------------------------
+
+### Pontos de previsão {.no-title}
+
+```{r}
+fc_tbl
+```
+
+### Tabela de acurácia {.no-title}
+
+```{r}
+rmse_tbl
+```
+
+
+

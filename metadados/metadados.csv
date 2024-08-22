@@ -1,0 +1,23 @@
+variavel;acronimo;unidade;fonte;codigo
+Índice Nacional de Preços ao Consumidor Amplo (IPCA);ipca;% a.m.;IBGE;/t/1737/n1/all/v/63/p/all/d/v63%202
+Taxa de câmbio - Livre - Venda - Média mensal;cambio;R$/US$;BCB;3698
+"Interesse por ""seguro desemprego"" - Brasil";seguro_desemprego;Índice;Google Trends;seguro desemprego
+Taxa de juros pré fixada - Estrutura a termo - LTN - 12 meses - Anbima;ltn;% a.a.;IPEADATA;ANBIMA12_TJTLN1212
+PIB mensal - Valores correntes;pib_mensal;R$ milhões;BCB;4380
+Índice geral de preços - Mercado (IGP-M) - FGV;igp_m;% a.m.;BCB;189
+Índice geral de preços - Disponibilidade interna (IGP-DI) - FGV;igp_di;% a.m.;BCB;190
+Meios de pagamento - M1 - Média dos dias úteis do mês;m1;R$ mil;BCB;27788
+Meios de pagamento amplos - M2 - Saldo em final de período;m2;R$ mil;BCB;27810
+Meios de pagamento amplos - M3 - Saldo em final de período;m3;R$ mil;BCB;27813
+Meios de pagamento amplos - M4 - Saldo em final de período;m4;R$ mil;BCB;27815
+Produção Industrial de Bens de Consumo - PIM-PF;pim_pf_bens_consumo;% a.m.;IBGE;/t/3651/n1/all/v/4139/p/all/c543/129300/d/v4139%201
+Estoque de empregos formais - Total - Encadeamento do antigo e novo CAGED;estoque_caged;Pessoa;BCB;28763
+Balança comercial - Balanço de Pagamentos BPM6 - Mensal - Saldo;saldo_bc;US$ milhões;BCB;22707
+Imposto sobre a renda (IR) - Total - Receita bruta - ME;ir;R$ milhões;IPEADATA;SRF12_IR12
+Ibovespa - Índice de ações - Fechamento - Anbima;ibovespa;% a.m.;IPEADATA;ANBIMA12_IBVSP12
+Índice de volume de vendas no comércio varejista ampliado - PMC;pmc_volume;% a.a.;IBGE;/t/8186/n1/all/v/11709/p/all/c11046/56736/d/v11709%201
+Vendas de veículos pelas concessionárias - Automóveis - Fenabrave;vendas_auto;Automóvel;BCB;7384
+Dívida Líquida do Setor Público - Total - Setor público consolidado;divida_liquida_spc;% PIB;BCB;4513
+Consumo de energia elétrica - Comercial - Quantidade - Eletrobras;consumo_energia;GWh;IPEADATA;ELETRO12_CEET12
+Preço - petróleo bruto - Brent - FOB - Energy Information Administration (EIA);brent_fob;US$/barril;IPEADATA;EIA366_PBRENT366
+Expectativas de mercado mensais de inflação - IPCA - Focus/BCB;expectativa_ipca;%;Focus/BCB;IPCA
