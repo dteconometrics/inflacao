@@ -1,0 +1,53 @@
+# Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
+# Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
+on:
+  push:
+    branches: [main, master]
+  schedule:
+    - cron: "0 0 15 * *"
+
+name: Model update
+
+jobs:
+  model-update:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      RENV_PATHS_ROOT: ~/.local/share/renv
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Install curl
+        run: sudo apt -y install libcurl4-openssl-dev
+
+      - uses: actions/cache@v2
+        with:
+          path: ${{ env.RENV_PATHS_ROOT }}
+          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-renv-
+
+      - name: Restore packages
+        run: |
+          if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
+          renv::restore()
+        shell: Rscript {0}
+
+      - uses: r-lib/actions/setup-pandoc@v2
+
+      - name: Update model and knit dashboard
+        run: |
+          source("R/ipca.R")
+        shell: Rscript {0}
+
+      - name: Commit results
+        run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
+          git add .
+          git commit -m "Update model and dashboard" || echo "No changes to commit"
+          git push origin || echo "No changes to commit"
