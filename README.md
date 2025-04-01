@@ -10,3 +10,11 @@ Resumo do projeto:  Este estudo tem como objetivo prever a inflação brasileira
  FOCUS obtida junto ao BACEN- foram considerados. Adicionalmente, foi explorada
  a combinação entre os modelos. Individualmente, o método CSR apresentou a melhor
  acurácia, enquanto a combinação teve impacto na redução do RMSE.
+
+para acessar a dashboarde com resultado: https://dteconometrics.github.io/inflacao/
+
+**Para conferir o peojeto em detalhe**
+
+1) Scripts: na pasta R
+2) O documento em Rmarkdoown e em PDF: na pasta Docs
+3) Os dados utilizados: na pasta metadados
