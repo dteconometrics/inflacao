@@ -13,7 +13,7 @@ Resumo do projeto:  Este estudo tem como objetivo prever a inflação brasileira
 
 para acessar a dashboarde com resultado: https://dteconometrics.github.io/inflacao/
 
-**Para conferir o peojeto em detalhe**
+**Para conferir o projeto em detalhe**
 
 1) Scripts: na pasta R
 2) O documento em Rmarkdoown e em PDF: na pasta Docs
